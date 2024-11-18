@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SerializableSnippets xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <commands>
+    <Snippet>
+      <id>1</id>
+      <name>VCmd.FormatSQL</name>
+      <code>using EnvDTE;
+using EnvDTE80;
+
+public class C : VisualCommanderExt.ICommand
+{
+public void Run(EnvDTE80.DTE2 DTE, Microsoft.VisualStudio.Shell.Package package)
+{
+    DTE.ExecuteCommand("SQLComplete.FormatDocument");
+    DTE.ExecuteCommand("SQLComplete.InsertSemicolons");
+}
+}
+</code>
+      <referencedAssemblies />
+      <type>Command</type>
+      <lang>CS</lang>
+      <langVersion>v4.0</langVersion>
+      <enabled>true</enabled>
+      <includeDebugInformation>false</includeDebugInformation>
+    </Snippet>
+  </commands>
+  <extensions />
+  <commonCode />
+</SerializableSnippets>
